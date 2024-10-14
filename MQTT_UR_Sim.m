@@ -1,9 +1,9 @@
 function MQTT_UR_Sim()
     % MQTT Setup
-    brokerAddress = "tcp://broker.hivemq.com";
-    ClientID = "myURsim";
-    topic_angles = "robot_joint_angles";  % Topic for receiving joint angles
-    topic_status = "robot_status";        % Topic for publishing status
+    brokerAddress = "tcp://10.243.82.33:1883";
+    ClientID = "group1sim";
+    topic_angles = "group1_joint_angles";  % Topic for receiving joint angles
+    topic_status = "group1_status";        % Topic for publishing status
 
     % Try to establish MQTT connection
     Client = connect_mqtt(brokerAddress, ClientID);
@@ -15,7 +15,7 @@ function MQTT_UR_Sim()
     % Subscribe to the joint_angles topic
     subscribe(Client, topic_angles);
 
-    % Load the UR3 robot model from the Robotics System Toolbox
+    % Load the UR5 robot model from the Robotics System Toolbox
     figure(1);
     clf;
     robot = loadrobot('universalUR3', 'DataFormat', 'row', 'Gravity', [0, 0, -9.81]);
@@ -60,7 +60,7 @@ function MQTT_UR_Sim()
 
             % Publish "received" to the "robot/status" topic after receiving the message
             write(Client, topic_status, "received");
-            disp('Published "received" to robot/status');
+            disp('Published "received" to status topic');
 
             % Interpolate between the last angles and the new angles using spline
             num_steps = 50; % Number of steps for smooth transition
