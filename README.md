@@ -11,6 +11,3 @@ This repository contains code for the **ME-35** intro lesson on **ROS2**. The go
 ### `example_sim_control.py`
 - A simple Python script designed to test the MQTT-based configuration of the simulated arm.
 - **Note**: Make sure to update the MQTT client and topic names in this script to match the names used in the MATLAB program.
-
-## Future Updates
-- The **ROS2 Simulation Action Server** will be added in future updates. This package creates a ROS2 node for controlling the simulated arm as an action server. It will be integrated into class exercises for hands-on learning.
