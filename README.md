@@ -2,6 +2,8 @@
 
 This repository contains code for the **ME-35** intro lesson on **ROS2**. The goal of this lesson is to provide an introduction to ROS2 programming through a digital visualization of a robot without having to install ROS locally to use existing packages like RViz or Gazebo. This means a virtual ROS environment can be hosted through a Jupyter Hub so students can still learn ROS without a physical robot present and without having to download any software. Then, they can take turns running their programs on the real arm and see their simulation come to life!
 
+<img width="1050" alt="Screenshot 2024-10-15 at 11 07 05 PM" src="https://github.com/user-attachments/assets/766664e0-c906-49b1-94f5-efb2dfa0b3f1">
+
 ## Files
 
 ### `MQTT_UR_Sim.m`
